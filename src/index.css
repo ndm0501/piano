@@ -1,13 +1,73 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.piano {
+  text-align: center;
+  margin: 0;
+  width: 630px;
+  position: relative;
+  padding: 30px 15px 0px 15px;
+  background-color: brown;
+}
+.board {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.key {
+  position: relative;
+  display: inline-block;
+  width: calc(100% / 7);
+  height: 200px;
+  background-color: #e7e7e7;
+  border: 0.5px solid black;
+  color: black;
+}
+.keySharp {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 100px;
+  background-color: #222;
+  top: 0;
+  left: 0;
+  color: #e7e7e7;
+}
+.keySharp.cs {
+  left: calc(100% / 7 - 25px);
+}
+.keySharp.ds {
+  left: calc(200% / 7 - 25px);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.keySharp.fs {
+  left: calc(400% / 7 - 25px);
+}
+.keySharp.gs {
+  left: calc(500% / 7 - 25px);
+}
+.keySharp.as {
+  left: calc(600% / 7 - 25px);
+}
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.note {
+  text-transform: capitalize;
+}
+.keyboardKey {
+  text-transform: capitalize;
 }
