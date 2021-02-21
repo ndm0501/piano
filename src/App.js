@@ -1,4 +1,3 @@
-import "./App.css";
 import NoteKey from "./component/NoteKey";
 
 const App = () => {
